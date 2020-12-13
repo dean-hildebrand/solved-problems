@@ -19,13 +19,13 @@
 
 //solution #2
 
-function reverse(str) {
-  let reverseWord = "";
-  for (let char of str) {
-    reverseWord = char + reverseWord;
-  }
-  return reversed;
-}
+// function reverse(str) {
+//   let reverseWord = "";
+//   for (let char of str) {
+//     reverseWord = char + reverseWord;
+//   }
+//   return reversed;
+// }
 
 //solution #3
 
@@ -37,3 +37,11 @@ function reverse(str) {
 //   }
 //   return reversed;
 // }
+
+//solution #4
+
+function reverse(str) {
+  str.split("").reduce((reversedStr, char) => {
+    return char + reversedStr;
+  }, "");
+}
