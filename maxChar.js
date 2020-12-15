@@ -18,6 +18,8 @@ function maxChar(str) {
       result[char]++;
     }
   }
+
+  // char in for in loop is the "key"
   for (let char in result) {
     if (result[char] > max) {
       max = result[char];
