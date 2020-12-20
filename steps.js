@@ -38,3 +38,20 @@ function steps(n) {
 
 
 //recursive
+//default row arg to 0, stair = ""
+function steps(n, row = 0, stair = "") {
+    if (row === n) {
+        return;
+    }
+    if (n === stair.length) {
+        console.log(stair);
+       return steps(n, row + 1);
+    }
+
+    if (stair.length <= row) {
+        stair += "#"
+    } else {
+        stair += ''
+    }
+    steps(n, row, stair)
+}
