@@ -9,7 +9,7 @@
 
 function capitalize(str) {
     let result = str[0].toUpperCase();
-
+// if the character before stri[i] is a space, capitilze current str[i]
     for (let i = 1; i < str.length; i++) {
         if (str[i -1] === " ") {
             result += str[i].toUpperCase()
