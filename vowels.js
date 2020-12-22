@@ -12,10 +12,23 @@
 function vowels(str) {
   let result = 0
 
-for (let char of str.split("")){
+for (let char of str.toLowerCase()){
   if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
     result++
   }
 }
 return result
 }
+
+//second iterative solution
+function vowels(str) {
+    let result = 0
+    const letters = "aeiou"
+  
+  for (let char of str.toLowerCase()){
+    if (letters.includes(char)) {
+      result++
+    }
+  }
+  return result
+  }
