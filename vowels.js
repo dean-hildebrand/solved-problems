@@ -32,3 +32,11 @@ function vowels(str) {
   }
   return result
   }
+
+  //regex
+  // g - runs through the whole str and not just the first one
+  //i - takes care of upper/lowercase
+  function vowels(str) {
+      const matches = str.match(/[aeiou]/gi);
+      return matches ? matches.length : 0;
+  }
