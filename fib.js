@@ -8,7 +8,6 @@
 // Example:
 //   fib(4) === 3
 
-
 //iterative
 function fib(n) {
   const result = [0, 1];
@@ -21,12 +20,32 @@ function fib(n) {
   return result[n];
 }
 
-//recursive
-function(n) {
-    if( n < 2) {
-        return n
+//--------------------------------------------
+//memoization for recursive solution to speed it up
+//helper function
+
+function memoize(fn) {
+  //cache object collects previous calls and results
+  const cache = {};
+  //spread operator because we dont know the number of arguments
+  return function (...args) {
+    if (cache[args]) {
+      return cache[args];
     }
-    return fib(n - 1) + fib(n - 2)
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
 }
 
+//recursive
+function fib(n) {
+  if (n < 2) {
+    return n;
+  }
+  return fib(n - 1) + fib(n - 2);
+}
 
+const fib = memoize(fib);
