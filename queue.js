@@ -18,8 +18,13 @@ class Queue {
     this.data.unshift(record);
   }
   // remove last record from queue
-  remove(record) {
+  remove() {
     return this.data.pop();
+  }
+
+  //returns the last item in the queue
+  peek() {
+    return this.data[this.data.length - 1];
   }
 }
 
