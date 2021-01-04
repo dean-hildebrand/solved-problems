@@ -22,7 +22,7 @@ class Queue {
     return this.data.pop();
   }
 
-  //returns the last item in the queue
+  //returns the last item in the
   peek() {
     return this.data[this.data.length - 1];
   }
