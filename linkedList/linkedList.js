@@ -19,6 +19,18 @@ class LinkedList {
     const node = new Node(data, this.head);
     this.head = node;
   }
+
+  //tells how many nodes are in the linked list
+  size() {
+    let counter = 0;
+    let node = this.head;
+
+    while (node) {
+      counter++;
+      node = node.next;
+    }
+    return counter;
+  }
 }
 
 module.exports = { Node, LinkedList };
